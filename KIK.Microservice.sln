@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice", "Microservice", "{DA4F29E3-4351-4AED-A2E4-8B5BF3183A4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Baskets", "Baskets", "{9A3D2650-DF88-403E-BBB9-A6FB821BFE6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Basket.Api", "src\Microservices\Baskets\KIK.Microservice.Basket.Api\KIK.Microservice.Basket.Api.csproj", "{C5CC67D8-5C45-475A-BC6C-BD0D01827BE9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Basket.Abstraction", "src\Microservices\Baskets\KIK.Microservice.Basket.Abstraction\KIK.Microservice.Basket.Abstraction.csproj", "{BA8BB189-75C8-4BFA-A2A0-2A3E280C41D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservices.Basket.Application", "src\Microservices\Baskets\KIK.Microservices.Basket.Application\KIK.Microservices.Basket.Application.csproj", "{CDAE4109-7D41-4386-8A94-8129E617AB45}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{29937EEF-19A9-41A7-9212-AFCCA6C7BECD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{70E31E6B-1E4D-47E8-87D2-B6E7C4B24479}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{C231DFC7-A1B5-4F2F-9888-D9C0E0A985F9}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\pubsub.yaml = dapr\components\pubsub.yaml
+		dapr\components\statestore.yaml = dapr\components\statestore.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{3459C7DE-35E7-4848-8520-9110833C8F53}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\configuration\config.yaml = dapr\configuration\config.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{9031851E-C470-469D-930D-168545BF9CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Order.Api", "src\Microservices\Orders\KIK.Microservice.Order.Api\KIK.Microservice.Order.Api.csproj", "{66CE77A7-1324-4DA2-9166-568DA5361D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Order.Application", "src\Microservices\Orders\KIK.Microservice.Order.Application\KIK.Microservice.Order.Application.csproj", "{8B6E0683-3675-461B-99D4-09E55D10CCB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Order.Abstraction", "src\Microservices\Orders\KIK.Microservice.Order.Abstraction\KIK.Microservice.Order.Abstraction.csproj", "{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5CC67D8-5C45-475A-BC6C-BD0D01827BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CC67D8-5C45-475A-BC6C-BD0D01827BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CC67D8-5C45-475A-BC6C-BD0D01827BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CC67D8-5C45-475A-BC6C-BD0D01827BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA8BB189-75C8-4BFA-A2A0-2A3E280C41D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA8BB189-75C8-4BFA-A2A0-2A3E280C41D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA8BB189-75C8-4BFA-A2A0-2A3E280C41D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA8BB189-75C8-4BFA-A2A0-2A3E280C41D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDAE4109-7D41-4386-8A94-8129E617AB45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAE4109-7D41-4386-8A94-8129E617AB45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAE4109-7D41-4386-8A94-8129E617AB45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAE4109-7D41-4386-8A94-8129E617AB45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29937EEF-19A9-41A7-9212-AFCCA6C7BECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29937EEF-19A9-41A7-9212-AFCCA6C7BECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29937EEF-19A9-41A7-9212-AFCCA6C7BECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29937EEF-19A9-41A7-9212-AFCCA6C7BECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66CE77A7-1324-4DA2-9166-568DA5361D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66CE77A7-1324-4DA2-9166-568DA5361D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66CE77A7-1324-4DA2-9166-568DA5361D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66CE77A7-1324-4DA2-9166-568DA5361D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B6E0683-3675-461B-99D4-09E55D10CCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B6E0683-3675-461B-99D4-09E55D10CCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B6E0683-3675-461B-99D4-09E55D10CCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B6E0683-3675-461B-99D4-09E55D10CCB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A3D2650-DF88-403E-BBB9-A6FB821BFE6A} = {DA4F29E3-4351-4AED-A2E4-8B5BF3183A4C}
+		{C5CC67D8-5C45-475A-BC6C-BD0D01827BE9} = {9A3D2650-DF88-403E-BBB9-A6FB821BFE6A}
+		{BA8BB189-75C8-4BFA-A2A0-2A3E280C41D4} = {9A3D2650-DF88-403E-BBB9-A6FB821BFE6A}
+		{CDAE4109-7D41-4386-8A94-8129E617AB45} = {9A3D2650-DF88-403E-BBB9-A6FB821BFE6A}
+		{C231DFC7-A1B5-4F2F-9888-D9C0E0A985F9} = {70E31E6B-1E4D-47E8-87D2-B6E7C4B24479}
+		{3459C7DE-35E7-4848-8520-9110833C8F53} = {70E31E6B-1E4D-47E8-87D2-B6E7C4B24479}
+		{9031851E-C470-469D-930D-168545BF9CA9} = {DA4F29E3-4351-4AED-A2E4-8B5BF3183A4C}
+		{66CE77A7-1324-4DA2-9166-568DA5361D85} = {9031851E-C470-469D-930D-168545BF9CA9}
+		{8B6E0683-3675-461B-99D4-09E55D10CCB5} = {9031851E-C470-469D-930D-168545BF9CA9}
+		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD} = {9031851E-C470-469D-930D-168545BF9CA9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4EAACFAD-DAD2-4FC6-BBE1-8F2DB64CA98F}
+	EndGlobalSection
+EndGlobal

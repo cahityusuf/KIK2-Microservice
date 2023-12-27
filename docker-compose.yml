@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
+  zipkin:
+    image: openzipkin/zipkin-slim:latest
+
+  redis:
+    image: redis:alpine
+
+  redisinsight:
+    image: redislabs/redisinsight:latest
+
+  basket-api:
+    image: ${DOCKER_REGISTRY-}kikmicroservicebasketapi
+    build:
+      context: .
+      dockerfile: src/Microservices/Baskets/KIK.Microservice.Basket.Api/Dockerfile
+
+  basket-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:basket-api"
+    depends_on:
+      - basket-api
+
+  order-api:
+    image: ${DOCKER_REGISTRY-}kikmicroserviceorderapi
+    build:
+      context: .
+      dockerfile: src/Microservices/Orders/KIK.Microservice.Order.Api/Dockerfile
+
+  order-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:order-api"
+    depends_on:
+      - order-api
+
