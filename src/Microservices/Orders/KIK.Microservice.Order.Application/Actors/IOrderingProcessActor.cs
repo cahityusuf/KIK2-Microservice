@@ -6,12 +6,16 @@ namespace KIK.Microservice.Order.Application.Actors
     public interface IOrderingProcessActor : IActor
     {
         Task SubmitAsync(
-        string buyerId,
-        string buyerEmail,
-        string street,
-        string city,
-        string state,
-        string country,
-        BasketDto basket);
+                    string buyerId,
+                    string buyerEmail,
+                    string street,
+                    string city,
+                    string state,
+                    string country,
+                    BasketDto basket);
+
+        Task<OrderState> GetOrderDetail();
+
+        Task OrderStatusChangedToAwaitingStockValidation();
     }
 }

@@ -1,13 +1,9 @@
 ﻿using AutoMapper;
 using Dapr.Actors;
 using Dapr.Actors.Client;
-using Dapr.Client;
-using KIK.Microservice.Order.Abstraction.Dtos;
-using KIK.Microservice.Order.Abstraction.Models;
 using KIK.Microservice.Order.Application.Actors;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using static Google.Rpc.Context.AttributeContext.Types;
 
 namespace KIK.Microservice.Order.Application.Services.OrderCheckoutAccepted
 {

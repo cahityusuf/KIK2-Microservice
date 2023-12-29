@@ -5,7 +5,8 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "kik.microservice.basket.api": "StartDebugging",
-        "kik.microservice.order.api": "StartDebugging"
+        "kik.microservice.order.api": "StartDebugging",
+        "kik.microservice.product.api": "StartDebugging"
       }
     }
   }

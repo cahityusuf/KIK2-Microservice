@@ -1,6 +1,7 @@
 ﻿using Dapr;
 using KIK.Microservice.Order.Application.IntegrationEvents.Events;
 using KIK.Microservice.Order.Application.Services.OrderCheckoutAccepted;
+using KIK.Microservice.Order.Application.Services.OrderStatusChangedToSubmitted;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,9 +40,9 @@ namespace KIK.Microservice.Order.Api.Controllers
 
         [Topic("pubsub", nameof(OrderStatusChangedToSubmittedIntegrationEvent))]
         [HttpPost("/orderstatuschangedtosubmitted")]
-        public async Task OrderStatusChangedToSubmitted(OrderStatusChangedToSubmittedIntegrationEvent checkout)
+        public async Task OrderStatusChangedToSubmitted(OrderStatusChangedToSubmittedNotification checkout)
         {
-            await _mediator.Publish();
+            await _mediator.Publish(checkout);
         }
     }
 }

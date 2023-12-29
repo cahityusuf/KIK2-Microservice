@@ -38,7 +38,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Order.Abst
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Products", "Products", "{FD2119BA-CAFC-47DD-8F7A-B668772BA928}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Product.Api", "src\Microservices\Products\KIK.Microservice.Product.Api\KIK.Microservice.Product.Api.csproj", "{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Product.Api", "src\Microservices\Products\KIK.Microservice.Product.Api\KIK.Microservice.Product.Api.csproj", "{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Product.Application", "src\Microservices\Products\KIK.Microservice.Product.Application\KIK.Microservice.Product.Application.csproj", "{43263808-9BB7-4F53-9648-1F2C19C856CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,10 @@ Global
 		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43263808-9BB7-4F53-9648-1F2C19C856CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43263808-9BB7-4F53-9648-1F2C19C856CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43263808-9BB7-4F53-9648-1F2C19C856CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43263808-9BB7-4F53-9648-1F2C19C856CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD} = {9031851E-C470-469D-930D-168545BF9CA9}
 		{FD2119BA-CAFC-47DD-8F7A-B668772BA928} = {DA4F29E3-4351-4AED-A2E4-8B5BF3183A4C}
 		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF} = {FD2119BA-CAFC-47DD-8F7A-B668772BA928}
+		{43263808-9BB7-4F53-9648-1F2C19C856CF} = {FD2119BA-CAFC-47DD-8F7A-B668772BA928}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EAACFAD-DAD2-4FC6-BBE1-8F2DB64CA98F}

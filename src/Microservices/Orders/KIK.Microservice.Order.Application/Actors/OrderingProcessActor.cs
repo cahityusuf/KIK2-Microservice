@@ -1,7 +1,6 @@
 ﻿using Dapr.Actors.Runtime;
 using Dapr.Client;
 using KIK.Microservice.Order.Abstraction.Dtos;
-using KIK.Microservice.Order.Abstraction.Models;
 using KIK.Microservice.Order.Application.IntegrationEvents.Events;
 
 namespace KIK.Microservice.Order.Application.Actors
@@ -16,6 +15,31 @@ namespace KIK.Microservice.Order.Application.Actors
         }
 
         private Guid OrderId => Guid.Parse(Id.GetId());
+
+        public async Task<OrderState> GetOrderDetail()
+        {
+            return await StateManager.GetStateAsync<OrderState>(OrderDetailsStateName);
+        }
+
+        public async Task OrderStatusChangedToAwaitingStockValidation()
+        {
+            const string storeName = "statestore";
+
+            var daprClient = new DaprClientBuilder().Build();
+
+            var order = await StateManager.GetStateAsync<OrderState>(OrderDetailsStateName);
+
+            await daprClient.PublishEventAsync<OrderStatusChangedToAwaitingStockValidationIntegrationEvent>(
+                "pubsub",
+                nameof(OrderStatusChangedToAwaitingStockValidationIntegrationEvent),
+                    new OrderStatusChangedToAwaitingStockValidationIntegrationEvent(
+                        OrderId,
+                        OrderStatus.AwaitingStockValidation.Name,
+                        "Grace period elapsed; waiting for stock validation.",
+                        order.OrderItems
+                            .Select(orderItem => new OrderStockItem(orderItem.ProductId, orderItem.Units)),
+                        order.BuyerId));
+        }
 
         public async Task SubmitAsync(string buyerId,
         string buyerEmail,

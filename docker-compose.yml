@@ -40,3 +40,15 @@ services:
     depends_on:
       - order-api
 
+
+  product-api:
+    image: ${DOCKER_REGISTRY-}kikmicroserviceproductapi
+    build:
+      context: .
+      dockerfile: src/Microservices/Products/KIK.Microservice.Product.Api/Dockerfile
+
+  product-api-dapr:
+    image: "daprio/daprd:1.9.4"
+    network_mode: "service:product-api"
+    depends_on:
+      - product-api
