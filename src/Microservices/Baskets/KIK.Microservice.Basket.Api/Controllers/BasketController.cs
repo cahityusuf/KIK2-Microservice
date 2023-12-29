@@ -41,7 +41,7 @@ namespace KIK.Microservice.Basket.Api.Controllers
                                         (DateTime)checkout.CardExpiration,
                                         checkout.CardSecurityCode));
 
-            return Accepted();
+            return Accepted("siparişiniz alındı sizi bilgilendireceğim");
         }
     }
 }

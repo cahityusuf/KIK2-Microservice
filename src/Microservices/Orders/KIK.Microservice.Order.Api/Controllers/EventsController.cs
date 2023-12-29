@@ -1,5 +1,7 @@
 ﻿using Dapr;
 using KIK.Microservice.Order.Application.IntegrationEvents.Events;
+using KIK.Microservice.Order.Application.Services.OrderCheckoutAccepted;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KIK.Microservice.Order.Api.Controllers
@@ -8,11 +10,38 @@ namespace KIK.Microservice.Order.Api.Controllers
     [ApiController]
     public class EventsController : ControllerBase
     {
+        private readonly IMediator _mediator;
+
+        public EventsController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
         [Topic("pubsub", nameof(UserCheckoutAcceptedIntegrationEvent))]
         [HttpPost("/checkout")]
-        public async Task<ActionResult> Checkout(UserCheckoutAcceptedIntegrationEvent chekout)
+        public async Task Checkout(UserCheckoutAcceptedIntegrationEvent checkout)
         {
-            return Ok();
+            await _mediator.Publish(
+                new OrderCheckoutAcceptedNotification(
+                    checkout.UserId,
+                    checkout.UserEmail,
+                    checkout.City,
+                    checkout.Street,
+                    checkout.State,
+                    checkout.Country,
+                    checkout.CardNumber,
+                    checkout.CardHolderName,
+                    checkout.CardExpiration,
+                    checkout.CardSecurityNumber,
+                    checkout.RequestId,
+                    checkout.Basket));
+        }
+
+        [Topic("pubsub", nameof(OrderStatusChangedToSubmittedIntegrationEvent))]
+        [HttpPost("/orderstatuschangedtosubmitted")]
+        public async Task OrderStatusChangedToSubmitted(OrderStatusChangedToSubmittedIntegrationEvent checkout)
+        {
+            await _mediator.Publish();
         }
     }
 }

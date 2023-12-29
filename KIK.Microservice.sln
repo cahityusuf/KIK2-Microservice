@@ -30,11 +30,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orders", "Orders", "{9031851E-C470-469D-930D-168545BF9CA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Order.Api", "src\Microservices\Orders\KIK.Microservice.Order.Api\KIK.Microservice.Order.Api.csproj", "{66CE77A7-1324-4DA2-9166-568DA5361D85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Order.Api", "src\Microservices\Orders\KIK.Microservice.Order.Api\KIK.Microservice.Order.Api.csproj", "{66CE77A7-1324-4DA2-9166-568DA5361D85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Order.Application", "src\Microservices\Orders\KIK.Microservice.Order.Application\KIK.Microservice.Order.Application.csproj", "{8B6E0683-3675-461B-99D4-09E55D10CCB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Order.Application", "src\Microservices\Orders\KIK.Microservice.Order.Application\KIK.Microservice.Order.Application.csproj", "{8B6E0683-3675-461B-99D4-09E55D10CCB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Order.Abstraction", "src\Microservices\Orders\KIK.Microservice.Order.Abstraction\KIK.Microservice.Order.Abstraction.csproj", "{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KIK.Microservice.Order.Abstraction", "src\Microservices\Orders\KIK.Microservice.Order.Abstraction\KIK.Microservice.Order.Abstraction.csproj", "{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Products", "Products", "{FD2119BA-CAFC-47DD-8F7A-B668772BA928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KIK.Microservice.Product.Api", "src\Microservices\Products\KIK.Microservice.Product.Api\KIK.Microservice.Product.Api.csproj", "{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +74,10 @@ Global
 		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +93,8 @@ Global
 		{66CE77A7-1324-4DA2-9166-568DA5361D85} = {9031851E-C470-469D-930D-168545BF9CA9}
 		{8B6E0683-3675-461B-99D4-09E55D10CCB5} = {9031851E-C470-469D-930D-168545BF9CA9}
 		{6FE3BAFD-1FD0-4800-B3DD-26FB117C7CCD} = {9031851E-C470-469D-930D-168545BF9CA9}
+		{FD2119BA-CAFC-47DD-8F7A-B668772BA928} = {DA4F29E3-4351-4AED-A2E4-8B5BF3183A4C}
+		{382BDC4C-81A2-48AA-9D26-51509A4BF4BF} = {FD2119BA-CAFC-47DD-8F7A-B668772BA928}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4EAACFAD-DAD2-4FC6-BBE1-8F2DB64CA98F}

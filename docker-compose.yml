@@ -1,6 +1,9 @@
 version: '3.4'
 
 services:
+  dapr-placement:
+    image: "daprio/dapr:1.9.4"
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
 
